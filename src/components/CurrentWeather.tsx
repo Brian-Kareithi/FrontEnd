@@ -9,7 +9,7 @@ interface Props {
 
 const WEATHER_ICONS: Record<string, string> = {
   '01d': '\u2600', '01n': '\u263D',
-  '02d': '\u26C5', '02n': '\u26C5',
+  '02d': '\u2601', '02n': '\u2601',
   '03d': '\u2601', '03n': '\u2601',
   '04d': '\u2601', '04n': '\u2601',
   '09d': '\uD83C\uDF27', '09n': '\uD83C\uDF27',

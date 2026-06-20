@@ -74,7 +74,7 @@ export default function Home() {
       <header className="sticky top-0 z-10 bg-white/80 dark:bg-slate-800/80 backdrop-blur-sm border-b border-slate-200 dark:border-slate-700">
         <div className="max-w-5xl mx-auto px-4 py-3 flex items-center justify-between">
           <div className="flex items-center gap-2">
-            <span className="text-lg">\u26C5</span>
+            <span className="text-lg">\u2601</span>
             <h1 className="text-base font-bold text-slate-900 dark:text-slate-100">WeatherAI</h1>
           </div>
           <DarkModeToggle dark={dark} onToggle={toggle} />
@@ -195,7 +195,7 @@ export default function Home() {
         {/* Initial state */}
         {!weather && !loading && !error && (
           <div className="text-center py-20">
-            <p className="text-5xl mb-4">\u26C5</p>
+            <p className="text-5xl mb-4">\u2601</p>
             <h2 className="text-lg font-semibold text-slate-700 dark:text-slate-300 mb-2">
               Welcome to WeatherAI
             </h2>
