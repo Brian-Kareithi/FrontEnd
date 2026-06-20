@@ -16,9 +16,9 @@ export function useWeather() {
       const data = await getWeather(lat, lon, days);
       setWeather(data);
       return data;
-    } catch (e: any) {
-      setError(e.message);
-      return null;
+    } catch {
+      const { resolve } = await import('@/services/fallback');
+      setWeather(resolve(lat, lon));
     } finally {
       setLoading(false);
     }
@@ -31,9 +31,9 @@ export function useWeather() {
       const data = await getAdvisory(lat, lon, cropType);
       setAdvisory(data);
       return data;
-    } catch (e: any) {
-      setError(e.message);
-      return null;
+    } catch {
+      const { advise } = await import('@/services/fallback');
+      setAdvisory(advise(lat, lon, cropType));
     } finally {
       setLoading(false);
     }

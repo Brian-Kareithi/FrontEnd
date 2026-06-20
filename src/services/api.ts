@@ -43,7 +43,3 @@ export async function addFavorite(name: string, lat: number, lon: number): Promi
 export async function removeFavorite(id: string): Promise<void> {
   await fetchJson<void>(`${API_BASE}/favorites/${id}`, { method: 'DELETE' });
 }
-
-export async function getHealth(): Promise<{ status: string }> {
-  return fetchJson(`${API_BASE}/health`);
-}
